@@ -1,12 +1,10 @@
 pipeline {
-    agent { 
-        dockerfile {
-            customWorkspace './'
-            filename 'Dockerfile'
-        }
-    }
+    agent none
     stages {
         stage('Build') {
+            agent {
+                dockerfile true
+            }
             steps {
                 sh 'docker -v'
             }
