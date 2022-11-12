@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    privileged: true
+    user: root
+    ports:
+      - 9080:8080
+    container_name: jenkinscurso
+    volumes:
+      - /Users/kauanvallesantos/jenkins_compose/jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+  php:
+    image: php:7.2-apache
+    privileged: true
+    user: root
+    ports:
+      - 80:80
+    container_name: php
+    volumes:
+      - ./html:/var/www/html
