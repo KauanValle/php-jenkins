@@ -1,12 +1,11 @@
 pipeline {
-    agent {
-        label ‘main-host’
+    agent { 
+        dockerfile {
+            filename 'Dockerfile'
+        }
     }
     stages {
         stage('Build') {
-            agent {
-                dockerfile true
-            }
             steps {
                 sh 'docker -v'
             }
