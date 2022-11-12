@@ -1,9 +1,9 @@
 pipeline {
-    agent { image: 'node:16.13.1-alpine' }
+    agent any
     stages {
         stage('Build') {
             steps {
-                sh 'node --version'
+               echo 'VAI SE FODER'
             }
         }
         stage('Test') {
