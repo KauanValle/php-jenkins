@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'php -v'
+                sh 'docker-compose up -d'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                sh 'php -v'
             }
         }
         stage('Deploy') {
