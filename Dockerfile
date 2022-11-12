@@ -1,8 +1,7 @@
 FROM php:7.2-apache
 
-
 RUN apt-get -y update
-RUN apt-get install docker
+RUN apt-get install dockerdock
 RUN apt-get -y install git
 
 #RUN php -r "copy('http://getcomposer.org/installer', 'composer-setup.php');"
