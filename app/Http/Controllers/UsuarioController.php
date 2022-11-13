@@ -13,7 +13,5 @@ class UsuarioController extends Controller
         $novoUsuario->fill($request->toArray());
 
         return response()->json($novoUsuario, 201);
-
-
     }
 }
