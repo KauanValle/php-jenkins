@@ -15,8 +15,18 @@ class UserTest extends TestCase
      */
     public function test_example()
     {
-        $response = $this->get('/');
+        $json = [
+            'nome' => 'Usuario Teste',
+            'email' => 'usuarioteste@gmail.com'
+        ];
 
-        $response->assertStatus(200);
+        $response = $this->post('/usuario', $json);
+
+        $response->assertJsonStructure([
+            'nome',
+            'email'
+        ]);
+
+        $response->assertStatus(201);
     }
 }

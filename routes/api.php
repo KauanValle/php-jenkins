@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/profille', function (Request $request) {
-    return response(['foo' => 'bar']);
+    return response(['foo' => [
+        'adsa' => 'bar'
+    ]]);
 });
+
+Route::post('/usuario', [UsuarioController::class, 'cadastrarUsuario']);
