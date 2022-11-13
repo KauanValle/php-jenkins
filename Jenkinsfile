@@ -15,10 +15,10 @@ pipeline {
             }
         }
         stage('Deployed') {
-                    steps {
-                        sh 'git checkout master'
-                        sh 'git merge --no-off develop'
-                    }
-                }
+            steps {
+                sh 'git checkout master'
+                sh 'git merge --no-ff develop'
+            }
+        }
     }
 }
