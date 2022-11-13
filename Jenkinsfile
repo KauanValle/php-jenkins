@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'composer --version'
+                sh 'cd micro-servico/'
+                sh 'php artisan test'
             }
         }
     }
