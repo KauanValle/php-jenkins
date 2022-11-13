@@ -14,5 +14,11 @@ pipeline {
                 sh 'php artisan test'
             }
         }
+        stage('Deployed') {
+            steps {
+                sh 'git checkout develop'
+                sh 'git merge master'
+            }
+        }
     }
 }
