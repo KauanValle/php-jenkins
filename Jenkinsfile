@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'php -v'
-                sh 'php artisan'
+                sh 'composer update --no-scripts'
                 sh 'php artisan test'
             }
         }

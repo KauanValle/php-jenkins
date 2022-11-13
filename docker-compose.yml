@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   jenkins:
-    image: kauanvalle/jenkins-php:1.0.2
+    image: kauanvalle/jenkins-php:1.0.3
     privileged: true
     user: root
     ports:
@@ -10,12 +10,3 @@ services:
     volumes:
       - /Users/kauanvallesantos/jenkins_compose/jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
-  php:
-    image: php:7.2-apache
-    privileged: true
-    user: root
-    ports:
-      - 80:80
-    container_name: php
-    volumes:
-      - ./html:/var/www/html
