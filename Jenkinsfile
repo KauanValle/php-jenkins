@@ -9,6 +9,8 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'php artisan key:generate'
+                sh 'php artisan config:cache'
                 sh 'php artisan test'
             }
         }
