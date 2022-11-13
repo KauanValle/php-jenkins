@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   jenkins:
-    image: kauanvalle/jenkins-php:1.0.1
+    image: kauanvalle/jenkins-php:1.0.2
     privileged: true
     user: root
     ports:

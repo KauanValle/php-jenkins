@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'ls'
-                sh 'composer dump-autoload'
+                sh 'php -v'
+                sh 'php artisan'
                 sh 'php artisan test'
             }
         }
