@@ -12,8 +12,6 @@ class UsuarioController extends Controller
         $novoUsuario = new UsuarioModel();
         $novoUsuario->fill($request->toArray());
 
-        $testeJenkins = "Subiu pra prod!";
-
         return response()->json($novoUsuario, 201);
     }
 }
