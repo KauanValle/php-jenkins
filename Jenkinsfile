@@ -18,6 +18,7 @@ pipeline {
             steps {
                 sh 'git pull origin develop'
                 sh 'git checkout master'
+                sh 'git pull origin'
                 sh 'git merge develop'
                 sh 'git push origin master'
             }
