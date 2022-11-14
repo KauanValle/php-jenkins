@@ -19,6 +19,7 @@ pipeline {
                 sh 'git checkout master'
                 sh 'git merge develop'
                 sh 'git push origin master'
+
             }
         }
     }
