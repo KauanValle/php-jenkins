@@ -17,6 +17,7 @@ pipeline {
         stage('Deployed') {
             steps {
                 sh 'git checkout master'
+                sh 'git status'
                 sh 'git merge develop'
             }
         }
