@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deployed') {
             steps {
-                sh 'git push origin master'
+                echo 'deploy...'
             }
         }
     }
