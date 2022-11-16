@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Deployed') {
             steps {
-                sh 'git checkout master'
+                // sh 'git checkout master'
                 sh 'git add .'
                 sh 'git commit -m "teste passou"'
                 sh 'git push origin master'
