@@ -12,8 +12,6 @@ class UsuarioController extends Controller
         $novoUsuario = new UsuarioModel();
         $novoUsuario->fill($request->toArray());
 
-        $string = "oLA MUNDO";
-
         return response()->json($novoUsuario, 201);
     }
 }
