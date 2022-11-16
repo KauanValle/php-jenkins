@@ -16,10 +16,7 @@ pipeline {
         }
         stage('Deployed') {
             steps {
-                sh 'git pull origin'
-                sh 'git checkout master'
-                sh 'git merge develop'
-                sh 'git push origin master'
+                sh 'Deployed...'
             }
         }
     }
